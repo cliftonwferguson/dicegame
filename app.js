@@ -13,6 +13,8 @@ var scores, roundScore, activePlayer;
 
 var scores = [0,0];
 var roundScore = 0;
-activePlayer = 0;
+activePlayer = 1;
 
-dice = 
+dice = Math.floor(Math.random() * 6) +1 ;
+
+document.querySelector('#current-' + activePlayer).textContent = dice; 
