@@ -11,13 +11,29 @@ GAME RULES:
 
 var scores, roundScore, activePlayer;
 
-var scores = [0,0];
-var roundScore = 0;
+scores = [0,0];
+roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor(Math.random() * 6) +1 ;
 
-document.querySelector('#current-' + activePlayer).textContent = dice; 
 
 
 document.querySelector('.dice').style.display = 'none';
+
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+	var dice = Math.floor(Math.random() * 6) +1 ;
+    
+    var diceDOM = document.querySelector('.dice');
+
+    diceDOM.style.display = 'block';
+
+    diceDOM.src = 'dice-' + dice + '.png';
+    
+
+
+
+});
+
+
+//document.querySelector('#current-' + activePlayer).textContent = dice; 
